@@ -26,14 +26,7 @@ const FEATURES = [
 export default function App() {
   const year = new Date().getFullYear();
   const heroRef = useRef<HTMLElement>(null);
-  const {
-    onMouseMove,
-    onMouseLeave,
-    onTouchStart,
-    onTouchMove,
-    onTouchEnd,
-    onTouchCancel,
-  } = useHeroPointer(heroRef);
+  const { onMouseMove, onMouseLeave } = useHeroPointer(heroRef);
 
   return (
     <div className="page">
@@ -42,10 +35,6 @@ export default function App() {
         ref={heroRef}
         onMouseMove={onMouseMove}
         onMouseLeave={onMouseLeave}
-        onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
-        onTouchEnd={onTouchEnd}
-        onTouchCancel={onTouchCancel}
       >
         <HeroScene />
         <div className="hero__copy-backdrop" aria-hidden />

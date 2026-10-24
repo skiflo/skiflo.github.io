@@ -26,7 +26,14 @@ const FEATURES = [
 export default function App() {
   const year = new Date().getFullYear();
   const heroRef = useRef<HTMLElement>(null);
-  const { onMouseMove, onMouseLeave } = useHeroPointer(heroRef);
+  const {
+    onMouseMove,
+    onMouseLeave,
+    onTouchStart,
+    onTouchMove,
+    onTouchEnd,
+    onTouchCancel,
+  } = useHeroPointer(heroRef);
 
   return (
     <div className="page">
@@ -35,11 +42,15 @@ export default function App() {
         ref={heroRef}
         onMouseMove={onMouseMove}
         onMouseLeave={onMouseLeave}
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+        onTouchCancel={onTouchCancel}
       >
         <HeroScene />
         <div className="hero__copy-backdrop" aria-hidden />
         <div className="hero__inner">
-          <SkiFloLogo layout="stacked" theme="dark" glitchName className="hero__brand" />
+          <SkiFloLogo layout="stacked" theme="dark" className="hero__brand" />
           <div className="hero__copy">
             <h1 className="hero__title">Your ski day companion built on real-time data</h1>
             <p className="hero__lead">

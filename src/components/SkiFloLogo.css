@@ -1,0 +1,210 @@
+.brand-lockup {
+  display: flex;
+  align-items: center;
+}
+
+.brand-lockup--stacked {
+  flex-direction: column;
+  text-align: center;
+  gap: 1.25rem;
+}
+
+.brand-lockup--horizontal {
+  flex-direction: row;
+  gap: 1rem;
+  text-align: left;
+}
+
+.brand-lockup__mark {
+  display: block;
+  overflow: visible;
+  flex-shrink: 0;
+  width: auto;
+  height: auto;
+}
+
+.brand-lockup__mark-shape {
+  fill: var(--color-white);
+  fill-opacity: 0.94;
+  filter: drop-shadow(0 6px 16px rgba(7, 11, 18, 0.4));
+}
+
+.brand-lockup__mark-dot {
+  fill: var(--color-signal-cyan);
+  transform-box: fill-box;
+  transform-origin: center;
+  filter: drop-shadow(0 0 6px rgba(0, 240, 255, 0.9)) drop-shadow(0 0 16px rgba(0, 240, 255, 0.45));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .brand-lockup__mark-dot {
+    animation: brand-mark-dot-pulse 3.8s ease-in-out infinite;
+  }
+}
+
+@keyframes brand-mark-dot-pulse {
+  0%,
+  100% {
+    transform: scale(0.92);
+    opacity: 0.82;
+  }
+
+  50% {
+    transform: scale(1.12);
+    opacity: 1;
+  }
+}
+
+.brand-lockup__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.brand-lockup--stacked .brand-lockup__text {
+  align-items: center;
+}
+
+.brand-lockup__name {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.brand-lockup--dark .brand-lockup__name {
+  color: var(--color-white);
+}
+
+.brand-lockup--light .brand-lockup__name {
+  color: var(--color-deep-blue);
+}
+
+.brand-lockup__tagline {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.brand-lockup--dark .brand-lockup__tagline {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.brand-lockup--light .brand-lockup__tagline {
+  color: var(--color-alpine-blue);
+}
+
+.brand-lockup__name--glitch {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.brand-lockup__glyph {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+  text-shadow: 0 0 0 transparent;
+  transform: translate(0, 0);
+  transition:
+    text-shadow 0.7s ease-out,
+    transform 0.7s ease-out;
+}
+
+.brand-lockup__glyph::before,
+.brand-lockup__glyph::after {
+  content: attr(data-char);
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  pointer-events: none;
+  font: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  transition: opacity 0.75s ease-out;
+  animation-play-state: paused;
+}
+
+.brand-lockup__glyph::before {
+  color: var(--color-signal-cyan);
+  animation: brand-glyph-channel-a 0.28s steps(2) infinite;
+}
+
+.brand-lockup__glyph::after {
+  color: rgba(148, 196, 255, 0.95);
+  animation: brand-glyph-channel-b 0.32s steps(2) infinite reverse;
+}
+
+.brand-lockup__glyph:hover {
+  text-shadow: 0 0 12px rgba(0, 240, 255, 0.55);
+  transform: translate(-0.5px, 0);
+  transition:
+    text-shadow 0.05s ease-in,
+    transform 0.05s ease-in;
+}
+
+.brand-lockup__glyph:hover::before,
+.brand-lockup__glyph:hover::after {
+  transition: opacity 0.05s ease-in;
+}
+
+.brand-lockup__glyph:hover::before {
+  opacity: 0.85;
+  animation-play-state: running;
+}
+
+.brand-lockup__glyph:hover::after {
+  opacity: 0.7;
+  animation-play-state: running;
+}
+
+@keyframes brand-glyph-channel-a {
+  0%,
+  100% {
+    transform: translate(-2px, 0);
+    clip-path: inset(0 0 58% 0);
+  }
+  50% {
+    transform: translate(-3px, 1px);
+    clip-path: inset(52% 0 0 0);
+  }
+}
+
+@keyframes brand-glyph-channel-b {
+  0%,
+  100% {
+    transform: translate(2px, 0);
+    clip-path: inset(58% 0 0 0);
+  }
+  50% {
+    transform: translate(3px, -1px);
+    clip-path: inset(0 0 52% 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-lockup__mark-dot {
+    animation: none;
+  }
+
+  .brand-lockup__glyph::before,
+  .brand-lockup__glyph::after {
+    animation: none;
+  }
+
+  .brand-lockup__glyph:hover {
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.45);
+    transform: none;
+  }
+
+  .brand-lockup__glyph:hover::before,
+  .brand-lockup__glyph:hover::after {
+    opacity: 0;
+  }
+}

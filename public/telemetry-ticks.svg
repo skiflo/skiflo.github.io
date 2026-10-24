@@ -1,0 +1,40 @@
+<svg width="448" height="320" viewBox="0 0 448 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 7×5 ticks on a 64px lattice; width/height are exact multiples for seamless repeat. -->
+  <g opacity="0.65" stroke="#368294">
+    <path d="M0 4H8M4 0V8" />
+    <path d="M64 4H72M68 0V8" />
+    <path d="M128 4H136M132 0V8" />
+    <path d="M192 4H200M196 0V8" />
+    <path d="M256 4H264M260 0V8" />
+    <path d="M320 4H328M324 0V8" />
+    <path d="M384 4H392M388 0V8" />
+    <path d="M0 68H8M4 64V72" />
+    <path d="M64 68H72M68 64V72" />
+    <path d="M128 68H136M132 64V72" />
+    <path d="M192 68H200M196 64V72" />
+    <path d="M256 68H264M260 64V72" />
+    <path d="M320 68H328M324 64V72" />
+    <path d="M384 68H392M388 64V72" />
+    <path d="M0 132H8M4 128V136" />
+    <path d="M64 132H72M68 128V136" />
+    <path d="M128 132H136M132 128V136" />
+    <path d="M192 132H200M196 128V136" />
+    <path d="M256 132H264M260 128V136" />
+    <path d="M320 132H328M324 128V136" />
+    <path d="M384 132H392M388 128V136" />
+    <path d="M0 196H8M4 192V200" />
+    <path d="M64 196H72M68 192V200" />
+    <path d="M128 196H136M132 192V200" />
+    <path d="M192 196H200M196 192V200" />
+    <path d="M256 196H264M260 192V200" />
+    <path d="M320 196H328M324 192V200" />
+    <path d="M384 196H392M388 192V200" />
+    <path d="M0 260H8M4 256V264" />
+    <path d="M64 260H72M68 256V264" />
+    <path d="M128 260H136M132 256V264" />
+    <path d="M192 260H200M196 256V264" />
+    <path d="M256 260H264M260 256V264" />
+    <path d="M320 260H328M324 256V264" />
+    <path d="M384 260H392M388 256V264" />
+  </g>
+</svg>

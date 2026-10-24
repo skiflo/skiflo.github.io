@@ -11,8 +11,16 @@ const HERO_VIDEO_CROSSFADE_S = 1.4;
 const HERO_VIDEO_PREFETCH_LEAD_S = 10;
 
 const HERO_VIDEO_CLIPS = [
-  { src: "/hero/hero-ski-a.mp4", poster: "/hero/hero-ski-a-poster.jpg", eager: true },
-  { src: "/hero/hero-ski-b.mp4", poster: "/hero/hero-ski-b-poster.jpg", eager: false },
+  {
+    src: `${import.meta.env.BASE_URL}hero/hero-ski-a.mp4`,
+    poster: `${import.meta.env.BASE_URL}hero/hero-ski-a-poster.jpg`,
+    eager: true,
+  },
+  {
+    src: `${import.meta.env.BASE_URL}hero/hero-ski-b.mp4`,
+    poster: `${import.meta.env.BASE_URL}hero/hero-ski-b-poster.jpg`,
+    eager: false,
+  },
 ] as const;
 
 function isVideoReadyToPlay(video: HTMLVideoElement) {

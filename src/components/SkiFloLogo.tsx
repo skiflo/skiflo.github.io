@@ -9,28 +9,8 @@ const FLOWY_DOT = { cx: 378, cy: 52, r: 24 };
 type SkiFloLogoProps = {
   layout?: "stacked" | "horizontal";
   theme?: "dark" | "light";
-  glitchName?: boolean;
   className?: string;
 };
-
-function BrandName({ glitch }: { glitch: boolean }) {
-  if (!glitch) {
-    return <span className="brand-lockup__name">{BRAND_NAME}</span>;
-  }
-
-  return (
-    <span className="brand-lockup__name brand-lockup__name--glitch" aria-hidden="true">
-      {[...BRAND_NAME].map((char, index) => {
-        const display = char === " " ? "\u00a0" : char;
-        return (
-          <span key={`${index}-${char}`} className="brand-lockup__glyph" data-char={display}>
-            {display}
-          </span>
-        );
-      })}
-    </span>
-  );
-}
 
 function FlowyMark() {
   return (
@@ -49,7 +29,6 @@ function FlowyMark() {
 export function SkiFloLogo({
   layout = "stacked",
   theme = "dark",
-  glitchName = false,
   className,
 }: SkiFloLogoProps) {
   const rootClass = ["brand-lockup", `brand-lockup--${layout}`, `brand-lockup--${theme}`, className]
@@ -60,7 +39,7 @@ export function SkiFloLogo({
     <div className={rootClass} role="img" aria-label="SKI FLO — Real-time mountain telemetry">
       <FlowyMark />
       <div className="brand-lockup__text">
-        <BrandName glitch={glitchName} />
+        <span className="brand-lockup__name">{BRAND_NAME}</span>
         <span className="brand-lockup__tagline">Real-time mountain telemetry</span>
       </div>
     </div>

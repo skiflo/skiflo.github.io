@@ -3,13 +3,14 @@
   inset: 0;
   pointer-events: none;
   overflow: hidden;
+  background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-subtle) 100%);
 }
 
 .hero-scene__media {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  background-color: var(--color-deep-blue);
+  background-color: var(--color-bg-subtle);
   background-image: url("/hero/hero-ski-a-poster.jpg");
   background-position: center;
   background-size: cover;
@@ -23,7 +24,7 @@
   height: 110%;
   object-fit: cover;
   opacity: 0;
-  filter: saturate(0.62) brightness(0.6) contrast(1.1);
+  filter: saturate(1.05) brightness(1.08) contrast(1.02);
   transform: scale(1.05) translate(
     calc(var(--hero-dx, 0) * -13px),
     calc(var(--hero-dy, 0) * -10px)
@@ -53,13 +54,13 @@
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    105deg,
-    rgba(30, 58, 138, 0.72) 0%,
-    rgba(12, 31, 83, 0.78) 48%,
-    rgba(7, 11, 18, 0.88) 100%
+    180deg,
+    rgba(255, 255, 255, 0.88) 0%,
+    rgba(255, 255, 255, 0.72) 42%,
+    rgba(240, 253, 250, 0.65) 100%
   );
-  mix-blend-mode: multiply;
-  opacity: 0.82;
+  mix-blend-mode: normal;
+  opacity: 1;
 }
 
 .hero-scene__textures {
@@ -79,7 +80,7 @@
 }
 
 .hero-scene__ticks--base {
-  opacity: 0.44;
+  opacity: 0.5;
   transform: translate(
     calc(var(--hero-dx, 0) * -17px),
     calc(var(--hero-dy, 0) * -14px)
@@ -87,7 +88,7 @@
 }
 
 .hero-scene__ticks--bright {
-  opacity: 0.9;
+  opacity: 0.88;
   transform: translate(
     calc(var(--hero-dx, 0) * -17px),
     calc(var(--hero-dy, 0) * -14px)
@@ -143,20 +144,15 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  opacity: 1;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.35) 75%, transparent 100%);
+  opacity: 0.55;
 }
 
 .hero-scene__scan--bright .hero-scene__scanlines {
-  opacity: 1;
+  opacity: 0.95;
 }
 
 .hero-scene__vignette {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 95% 80% at 50% 50%, transparent 22%, var(--color-charcoal) 100%);
-  opacity: 0.42;
-  pointer-events: none;
+  display: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -178,7 +174,7 @@
   }
 
   .hero-scene__media {
-    filter: saturate(0.62) brightness(0.6) contrast(1.1);
+    filter: saturate(1.02) brightness(1.05);
   }
 
   .hero-scene__ticks--bright,

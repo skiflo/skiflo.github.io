@@ -39,11 +39,11 @@ export default function App() {
         <HeroScene />
         <div className="hero__copy-backdrop" aria-hidden />
         <div className="hero__inner">
-          <SkiFloLogo layout="stacked" theme="dark" className="hero__brand" />
+          <SkiFloLogo layout="stacked" theme="light" className="hero__brand" />
           <div className="hero__copy">
             <h1 className="hero__title">Your ski day companion built on real-time data</h1>
             <p className="hero__lead">
-              Ski Flo helps you read the mountain, avoid the crowds, and stay in the flow from first chair to last
+              Glisse helps you read the mountain, avoid the crowds, and stay in the flow from first chair to last
               tracks.
             </p>
             <a className="primary-cta primary-cta--hero" href="#waitlist">
@@ -79,7 +79,7 @@ export default function App() {
               Join the waitlist
             </h2>
             <p className="cta__body">
-              Share your email to request a beta invite. We&apos;ll only use it for beta access and Ski Flo updates.
+              Share your email to request a beta invite. We&apos;ll only use it for beta access and Glisse updates.
             </p>
             <BetaSignup />
           </div>
@@ -88,12 +88,12 @@ export default function App() {
 
       <footer className="footer">
         <div className="footer__inner">
-          <SkiFloLogo layout="horizontal" theme="dark" className="footer__brand" />
+          <SkiFloLogo layout="horizontal" theme="light" className="footer__brand" />
           <div className="footer__meta">
             <a className="footer__contact" href="mailto:info@skiflo.co">
               info@skiflo.co
             </a>
-            <p className="footer__copy">© {year} SKI FLO. All rights reserved.</p>
+            <p className="footer__copy">© {year} Glisse. All rights reserved.</p>
           </div>
         </div>
       </footer>

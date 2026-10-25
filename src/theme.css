@@ -1,25 +1,37 @@
 :root {
-  /* SKI FLO core palette */
-  --color-alpine-blue: #1e3a8a;
-  --color-deep-blue: #0c1f53;
-  --color-signal-cyan: #00f0ff;
-  --color-cyan: var(--color-signal-cyan);
+  /* Glisse — Option C (curly logotype + clean UI) */
+  --color-bg: #ffffff;
+  --color-bg-subtle: #f4f7fa;
+  --color-ink: #0f172a;
+  --color-ink-muted: #64748b;
+  --color-border: #e2e8f0;
+  --color-border-strong: #cbd5e1;
+
+  --color-teal: #0d9488;
+  --color-teal-bright: #14b8a6;
+  --color-red: #be123c;
+  --color-red-hover: #9f1239;
+
+  /* Semantic aliases (used across components) */
+  --color-accent: var(--color-teal);
+  --color-accent-bright: var(--color-teal-bright);
+  --color-cta: var(--color-red);
+  --color-cta-hover: var(--color-red-hover);
   --color-white: #ffffff;
 
-  --color-charcoal: #070b12;
-  --color-charcoal-elevated: #0a1020;
-  --color-muted: rgba(255, 255, 255, 0.68);
-  --color-muted-strong: rgba(255, 255, 255, 0.85);
-  --color-border: rgba(30, 58, 138, 0.45);
-  --color-border-subtle: rgba(255, 255, 255, 0.08);
+  /* Legacy token names → Glisse palette (keeps hero SVG vars working) */
+  --color-signal-cyan: var(--color-teal-bright);
+  --color-cyan: var(--color-teal);
 
-  --font-display: "Unbounded", system-ui, sans-serif;
+  --font-brand: "Parisienne", cursive;
   --font-sans: "Geist Sans", system-ui, sans-serif;
+  --font-display: var(--font-sans);
   --font-mono: "Geist Mono", ui-monospace, monospace;
 
   --radius-lg: 18px;
   --radius-icon: 18.6%;
-  --shadow-glow: 0 0 40px rgba(0, 240, 255, 0.15);
+  --shadow-glow: 0 0 40px rgba(13, 148, 136, 0.12);
+  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.06), 0 8px 24px rgba(15, 23, 42, 0.06);
   --max-width: 1120px;
 
   --texture-grid: url("/telemetry-grid.svg");

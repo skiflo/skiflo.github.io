@@ -10,6 +10,8 @@ const HERO_VIDEO_CROSSFADE_S = 1.4;
 /** Start fetching the next clip this many seconds before the crossfade. */
 const HERO_VIDEO_PREFETCH_LEAD_S = 10;
 
+const SHOW_HERO_VIDEO = false;
+
 const HERO_VIDEO_CLIPS = [
   {
     src: `${import.meta.env.BASE_URL}hero/hero-ski-a.mp4`,
@@ -45,7 +47,7 @@ function ScanlineLayer({ patternId, className }: { patternId: string; className?
               x2={SCANLINE_GRID}
               y2={y}
               stroke="var(--color-signal-cyan)"
-              strokeOpacity={0.24}
+              strokeOpacity={0.32}
               vectorEffect="non-scaling-stroke"
             />
           ))}
@@ -74,7 +76,7 @@ function ScanlineLayerBright({ patternId, className }: { patternId: string; clas
               x2={SCANLINE_GRID}
               y2={y}
               stroke="var(--color-signal-cyan)"
-              strokeOpacity={0.68}
+              strokeOpacity={0.58}
               vectorEffect="non-scaling-stroke"
             />
           ))}
@@ -254,17 +256,19 @@ function HeroCrossfadeVideos() {
   );
 }
 
-/** Hero backdrop — crossfaded ski video, ticks, scan lines, cursor glow (CSS vars from `.hero`). */
+/** Hero backdrop — telemetry ticks, scan lines, cursor glow (CSS vars from `.hero`). */
 export function HeroScene() {
   const patternBase = useId();
   const patternBright = useId();
 
   return (
     <div className="hero-scene" aria-hidden>
-      <div className="hero-scene__media">
-        <HeroCrossfadeVideos />
-        <div className="hero-scene__video-grade" />
-      </div>
+      {SHOW_HERO_VIDEO ? (
+        <div className="hero-scene__media">
+          <HeroCrossfadeVideos />
+          <div className="hero-scene__video-grade" />
+        </div>
+      ) : null}
 
       <div className="hero-scene__textures">
         <div className="hero-scene__ticks hero-scene__ticks--base" />

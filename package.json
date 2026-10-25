@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@fontsource/geist-mono": "^5.2.7",
+    "@fontsource/parisienne": "^5.2.8",
     "@fontsource/geist-sans": "^5.2.5",
-    "@fontsource/unbounded": "^5.2.7",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },

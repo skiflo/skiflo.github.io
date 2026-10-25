@@ -1,6 +1,6 @@
 <svg width="448" height="320" viewBox="0 0 448 320" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- 7×5 ticks on a 64px lattice; width/height are exact multiples for seamless repeat. -->
-  <g opacity="0.65" stroke="#368294">
+  <g opacity="0.95" stroke="#0d9488">
     <path d="M0 4H8M4 0V8" />
     <path d="M64 4H72M68 0V8" />
     <path d="M128 4H136M132 0V8" />

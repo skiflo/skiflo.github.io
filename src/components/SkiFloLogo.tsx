@@ -1,6 +1,6 @@
 import "./SkiFloLogo.css";
 
-const BRAND_NAME = "SKI FLO";
+const BRAND_NAME = "INBOUNDS";
 
 const FLOWY_VIEWBOX = "0 0 468 349";
 const FLOWY_PATH =
@@ -36,7 +36,7 @@ export function SkiFloLogo({
     .join(" ");
 
   return (
-    <div className={rootClass} role="img" aria-label="SKI FLO — Real-time mountain telemetry">
+    <div className={rootClass} role="img" aria-label="INBOUNDS — Real-time mountain telemetry">
       <FlowyMark />
       <div className="brand-lockup__text">
         <span className="brand-lockup__name">{BRAND_NAME}</span>

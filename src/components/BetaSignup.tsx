@@ -91,7 +91,7 @@ export function BetaSignup() {
       </button>
 
       <p className="beta-signup__notice">
-        By joining, you agree Ski Flo may email you about the beta, early access, and product updates. You can
+        By joining, you agree Inbounds may email you about the beta, early access, and product updates. You can
         unsubscribe from any message.
       </p>
 

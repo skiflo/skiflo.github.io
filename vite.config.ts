@@ -1,12 +1,16 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
-/** Project Pages base path, e.g. /website/ for https://skiflo.github.io/website/ */
+/**
+ * GitHub Pages base path.
+ * - Org/user site repo (`*.github.io`) → `/` at https://org.github.io/
+ * - Project site repo (`website`) → `/website/` at https://org.github.io/website/
+ */
 function githubPagesBase(): string {
   if (process.env.GITHUB_PAGES !== "true") return "/";
-  const repo = process.env.GITHUB_REPOSITORY;
-  const name = repo?.split("/")[1];
-  return name ? `/${name}/` : "/";
+  const name = process.env.GITHUB_REPOSITORY?.split("/")[1];
+  if (!name || name.endsWith(".github.io")) return "/";
+  return `/${name}/`;
 }
 
 export default defineConfig({

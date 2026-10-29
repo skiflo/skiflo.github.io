@@ -2,7 +2,7 @@
 
 Public landing page for [Ski Flo](https://github.com/skiflo/skiflo) — Vite + React, deployed to GitHub Pages.
 
-**Live site:** https://skiflo.github.io/website/
+**Live site:** https://skiflo.github.io/
 
 ## Development
 
